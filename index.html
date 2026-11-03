@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noble Miles — Redirecting...</title>
+  
+  <!-- 
+    ==================================================================
+    🚀 NOBLE MILES PERMANENT REDIRECT CONTROLLER
+    To change the destination tunnel URL from your phone:
+    Edit line 17 below, commit changes, and GitHub Pages updates automatically!
+    ==================================================================
+  -->
+  <script>
+    // ===============================================================
+    // 👇 EDIT YOUR DESTINATION CLOUDFLARE QUICK TUNNEL URL HERE:
+    // ===============================================================
+    const TARGET_URL = "https://tried-biz-hall-collective.trycloudflare.com/";
+    // ===============================================================
+
+    // Immediate JavaScript redirect attempt
+    try {
+      if (TARGET_URL && TARGET_URL.startsWith("http")) {
+        window.location.replace(TARGET_URL);
+      }
+    } catch (e) {
+      console.warn("Immediate redirect deferred to DOM load:", e);
+    }
+  </script>
+
+  <!-- Fallback meta refresh (after 3 seconds if JS is disabled or blocked) -->
+  <meta http-equiv="refresh" content="3; url=https://tried-biz-hall-collective.trycloudflare.com/">
+
+  <style>
+    :root {
+      --primary: #FD7E14;
+      --primary-hover: #E86A02;
+      --bg-base: #F8F9FA;
+      --card-bg: #FFFFFF;
+      --text-main: #212529;
+      --text-muted: #6C757D;
+      --border-color: #E9ECEF;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.25rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .redirect-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.25rem 1.75rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    /* Brand Logo Emblem */
+    .logo-container {
+      margin: 0 auto 1.25rem;
+      width: 64px;
+      height: 64px;
+      background: var(--primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 16px rgba(253, 126, 20, 0.28);
+    }
+
+    .logo-text {
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.2px;
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    /* Loading Spinner */
+    .spinner-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .spinner {
+      width: 44px;
+      height: 44px;
+      border: 3.5px solid #F1F3F5;
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .status-text {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .status-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Fallback Alert State (Shown after timeout or if tunnel is down) */
+    .fallback-box {
+      display: none;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-color);
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .alert-badge {
+      display: inline-block;
+      background: #FFF4E6;
+      color: #D9480F;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      border: 1px solid rgba(217, 72, 15, 0.2);
+    }
+
+    .fallback-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .fallback-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(253, 126, 20, 0.25);
+    }
+
+    .btn-primary:hover, .btn-primary:active {
+      background: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background: #F1F3F5;
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover, .btn-secondary:active {
+      background: #E9ECEF;
+    }
+
+    .footer-note {
+      font-size: 0.72rem;
+      color: #ADB5BD;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="redirect-card">
+    <!-- Noble Miles Logo -->
+    <div class="logo-container">
+      <span class="logo-text">NM</span>
+    </div>
+
+    <h1>Noble Miles</h1>
+    <p class="tagline">Intelligent Sun-Safe Travel Planning</p>
+
+    <!-- Normal Connecting Spinner -->
+    <div id="loadingBox" class="spinner-wrap">
+      <div class="spinner"></div>
+      <div>
+        <p class="status-text">Connecting to application...</p>
+        <p class="status-sub">Redirecting you to the live trial server</p>
+      </div>
+    </div>
+
+    <!-- Fallback Box (Appears if redirect takes longer than 3.5s) -->
+    <div id="fallbackBox" class="fallback-box">
+      <span class="alert-badge">Notice</span>
+      <h2 class="fallback-title">Noble Miles is temporarily unavailable</h2>
+      <p class="fallback-desc">
+        The live trial server may currently be restarting or renewing its secure connection. Please click below to proceed or retry.
+      </p>
+
+      <div class="btn-group">
+        <a id="directLink" href="#" class="btn btn-primary">Open Application Directly</a>
+        <button type="button" onclick="retryRedirect()" class="btn btn-secondary">Retry Connection</button>
+      </div>
+    </div>
+
+    <p class="footer-note">Permanent Access Portal &bull; Noble Miles</p>
+  </div>
+
+  <script>
+    // Set fallback direct button link
+    const directBtn = document.getElementById("directLink");
+    if (directBtn) {
+      directBtn.href = TARGET_URL;
+    }
+
+    // Attempt standard navigation immediately
+    function performRedirect() {
+      if (TARGET_URL && TARGET_URL.startsWith("http")) {
+        window.location.href = TARGET_URL;
+      }
+    }
+
+    function retryRedirect() {
+      const fallback = document.getElementById("fallbackBox");
+      const loading = document.getElementById("loadingBox");
+      if (fallback) fallback.style.display = "none";
+      if (loading) loading.style.display = "flex";
+      performRedirect();
+    }
+
+    // Trigger redirect
+    performRedirect();
+
+    // If still on this page after 3.5 seconds, show fallback buttons and informative notice
+    setTimeout(function() {
+      const fallback = document.getElementById("fallbackBox");
+      const loading = document.getElementById("loadingBox");
+      if (fallback) fallback.style.display = "block";
+      if (loading) loading.style.display = "none";
+    }, 3500);
+  </script>
+
+</body>
+</html>
